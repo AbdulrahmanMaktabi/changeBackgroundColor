@@ -10,5 +10,10 @@ function changeBackColor(){
     box.style.backgroundColor = `#${color.join("")}`
 }
 
-// setInterval(changeBackColor , 500);
 box.addEventListener("click" , changeBackColor);
+
+document.onkeyup = function(e) {
+    if(e.code === "Space"){
+        changeBackColor();
+    }
+}
